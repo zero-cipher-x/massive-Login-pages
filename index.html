@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Layout Carousel</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="carousel-controls">
+    <button id="prevBtn"><i class="fas fa-chevron-left"></i> Previous</button>
+    <span id="layoutIndicator">Layout 1 / 10</span>
+    <button id="nextBtn">Next <i class="fas fa-chevron-right"></i></button>
+  </div>
+
+  <div class="carousel-container">
+
+    <div class="login-wrapper active" id="layout-1" style="background: url('https://images.unsplash.com/photo-1491002052546-bf38f186af56?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;">
+      <div class="box-l1">
+        <h2>Login</h2>
+        <div class="input-group-l1">
+          <label>Email</label>
+          <input type="text" required>
+        </div>
+        <div class="input-group-l1">
+          <label>Password</label>
+          <input type="password" required>
+        </div>
+        <div class="options-l1">
+          <label><input type="checkbox"> Remember Me</label>
+          <a href="#">Forget Password</a>
+        </div>
+        <button class="btn-l1">Log In</button>
+        <p class="footer-text">Don't have an account <a href="#">Register</a></p>
+      </div>
+    </div>
+
+    <div class="login-wrapper" id="layout-2">
+      <div class="container-l2">
+        <div class="left-l2">
+          <h2>LOGIN</h2>
+          <hr class="line-l2">
+          <p class="subtitle-l2">Explore the World!</p>
+          <div class="input-group-l2">
+            <label>Email</label>
+            <input type="email" placeholder="abc@example.com">
+          </div>
+          <div class="input-group-l2">
+            <label>Password</label>
+            <input type="password" placeholder="enter your password">
+          </div>
+          <button class="btn-l2">Submit</button>
+          <a href="#" class="forgot-l2">Forgot Password?</a>
+        </div>
+        <div class="right-l2" style="background: url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80') no-repeat center center/cover;"></div>
+      </div>
+    </div>
+
+    <div class="login-wrapper" id="layout-3" style="background-color: #a4dbdb;">
+      <div class="box-l3">
+        <h2>Login</h2>
+        <div class="input-icon-l3">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="User name">
+        </div>
+        <div class="input-icon-l3">
+          <i class="fas fa-key"></i>
+          <input type="password" placeholder="••••••••">
+        </div>
+        <div class="options-l3">
+          <label><input type="checkbox"> Remember Me</label>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button class="btn-l3">Log in</button>
+        
+        <div class="social-section-l3">
+          <p>Login <span>With your social media account</span></p>
+          <div class="social-buttons">
+            <button class="tw"><i class="fab fa-twitter"></i> Twitter</button>
+            <button class="fb"><i class="fab fa-facebook-f"></i> Facebook</button>
+            <button class="gp"><i class="fab fa-google-plus-g"></i> Google+</button>
+          </div>
+        </div>
+        <div class="footer-l3">
+          Don't have an Account? <a href="#">Register Now!</a>
+          <button class="register-btn-l3">REGISTER</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="login-wrapper" id="layout-4" style="background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;">
+      <div class="container-l4">
+        <div class="left-l4">
+          <h2>Login</h2>
+          <input type="text" placeholder="Username">
+          <input type="password" placeholder="password">
+          <a href="#">Forgot My Password</a>
+          <button class="btn-l4">Login</button>
+        </div>
+        <div class="right-l4" style="background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80') no-repeat center center/cover;">
+          <div class="overlay-text-l4">
+            <h1>Welcome</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="login-wrapper" id="layout-5" style="background: url('https://images.unsplash.com/photo-1472214222541-d510753a8707?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;">
+      <div class="navbar-l5">
+        <div class="nav-links">
+          <a href="#">Home</a><a href="#">About</a><a href="#">Services</a><a href="#">Contact</a>
+        </div>
+        <div class="search-l5"><input type="text" placeholder="Search..."><i class="fas fa-search"></i></div>
+      </div>
+      <div class="container-l5">
+        <div class="left-l5" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1472214222541-d510753a8707?auto=format&fit=crop&w=600&q=80') no-repeat center center/cover;">
+          <h3><i class="fas fa-fire"></i> Codehal</h3>
+          <div class="welcome-msg-l5">
+            <h1>Welcome!</h1>
+            <p>To Our New Website.</p>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, asperiores.</span>
+            <div class="socials-l5"><i class="fab fa-linkedin"></i><i class="fab fa-facebook"></i><i class="fab fa-instagram"></i><i class="fab fa-twitter"></i></div>
+          </div>
+        </div>
+        <div class="right-l5">
+          <h2>Sign In</h2>
+          <div class="input-box-l5">
+            <input type="text" placeholder="Email" required><i class="fas fa-envelope"></i>
+          </div>
+          <div class="input-box-l5">
+            <input type="password" placeholder="Password" required><i class="fas fa-lock"></i>
+          </div>
+          <div class="options-l5">
+            <label><input type="checkbox"> Remember me</label>
+            <a href="#">Forgot password?</a>
+          </div>
+          <button class="btn-l5">Sign In</button>
+          <p class="signup-text-l5">Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="login-wrapper" id="layout-6" style="background: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;">
+      <div class="navbar-l6">
+        <div class="nav-links">
+          <a href="#">Home</a><a href="#">Portfolio</a><a href="#">Courses</a><a href="#">About us</a><a href="#">Contact us</a>
+        </div>
+        <button class="nav-login-btn">LOG IN</button>
+      </div>
+      <div class="modal-l6">
+        <span class="close-l6">&times;</span>
+        <div class="left-l6" style="background: url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=400&q=80') no-repeat center center/cover;">
+          <div class="overlay-l6">
+            <h3>Welcome Back</h3>
+            <p>Please log in using your personal information to stay connected with us.</p>
+          </div>
+        </div>
+        <div class="right-l6">
+          <h2>LOGIN</h2>
+          <input type="email" placeholder="Email">
+          <div class="pass-container-l6">
+            <input type="password" placeholder="Password"><i class="far fa-eye"></i>
+          </div>
+          <a href="#" class="forgot-l6">Forgot password?</a>
+          <button class="btn-l6">Log In</button>
+          <p class="footer-l6">Don't have an account? <a href="#">Signup</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="login-wrapper" id="layout-7" style="background-color: #0b131a;">
+      <div class="card-l7">
+        <div class="form-side-l7">
+          <h2>Login</h2>
+          <div class="input-row-l7">
+            <input type="text" placeholder="Username"><i class="fas fa-user"></i>
+          </div>
+          <div class="input-row-l7">
+            <input type="password" placeholder="Password"><i class="fas fa-lock"></i>
+          </div>
+          <button class="btn-l7">Login</button>
+          <p>Don't have an account? <a href="#">Sign Up</a></p>
+        </div>
+        <div class="banner-side-l7">
+          <div class="banner-content-l7">
+            <h1>WELCOME BACK!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="login-wrapper" id="layout-8" style="background-color: #1a2332;">
+      <div class="radar-container-l8">
+        <h2>Login</h2>
+        <input type="email" placeholder="Email" class="input-l8">
+        <input type="password" placeholder="Password" class="input-l8">
+        <a href="#" class="forgot-l8">Forgot your password?</a>
+        <button class="btn-l8">Login</button>
+        <a href="#" class="signup-l8">Signup</a>
+      </div>
+    </div>
+
+    <div class="login-wrapper" id="layout-9" style="background-color: #1f2226;">
+      <div class="card-l9">
+        <h2>Login Form</h2>
+        <div class="group-l9">
+          <label>User name</label>
+          <input type="text" value="fe">
+        </div>
+        <div class="group-l9">
+          <label>Password</label>
+          <input type="password" placeholder="Password">
+        </div>
+        <button class="btn-l9">Login</button>
+        <p>Forget password ? <a href="#">Click Here</a></p>
+        <p>Dont have an account ? <a href="#">Click Here</a></p>
+      </div>
+    </div>
+
+    <div class="login-wrapper" id="layout-10" style="background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;">
+      <div class="flex-container-l10">
+        <div class="card-l10">
+          <div class="avatar-l10"><i class="fas fa-user"></i></div>
+          <h3>Get Started</h3>
+          <div class="group-l10">
+            <label>Username</label>
+            <input type="text" placeholder="Enter Username">
+          </div>
+          <div class="group-l10">
+            <label>Password</label>
+            <input type="password" placeholder="Enter Password">
+          </div>
+          <button class="btn-l10">Login</button>
+          <a href="#">Lost your password?</a>
+          <a href="#">Don't have an account?</a>
+        </div>
+        <div class="coffee-space-l10"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const layouts = document.querySelectorAll('.login-wrapper');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const indicator = document.getElementById('layoutIndicator');
+    let currentIdx = 0;
+
+    function updateCarousel() {
+      layouts.forEach((layout, index) => {
+        if(index === currentIdx) {
+          layout.classList.add('active');
+        } else {
+          layout.classList.remove('active');
+        }
+      });
+      indicator.textContent = `Layout ${currentIdx + 1} / ${layouts.length}`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+      currentIdx = (currentIdx + 1) % layouts.length;
+      updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      currentIdx = (currentIdx - 1 + layouts.length) % layouts.length;
+      updateCarousel();
+    });
+  </script>
+</body>
+</html>

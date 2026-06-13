@@ -1,0 +1,379 @@
+/* RESET & BASE SYSTEMS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #0d0e12;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* TOP APPLICATION CONTROLLER */
+.carousel-controls {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(20, 24, 33, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  z-index: 9999;
+  border-bottom: 2px solid #00f2fe;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.carousel-controls button {
+  background: linear-gradient(45deg, #0072ff, #00f2fe);
+  border: none;
+  color: white;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.carousel-controls button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00f2fe;
+}
+
+#layoutIndicator {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* CAROUSEL WRAPPERS */
+.carousel-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 60px;
+}
+
+.login-wrapper {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 60px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-wrapper.active {
+  display: flex;
+}
+
+/* ==========================================
+   LAYOUT 1: Glassmorphism Winter Form
+   ========================================== */
+.box-l1 {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 40px 35px;
+  width: 380px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  text-align: center;
+}
+.box-l1 h2 { font-size: 32px; margin-bottom: 30px; font-weight: 500; }
+.input-group-l1 { text-align: left; margin-bottom: 25px; }
+.input-group-l1 label { font-size: 14px; display: block; margin-bottom: 5px; color: #ddd; }
+.input-group-l1 input {
+  width: 100%; background: transparent; border: none; border-bottom: 2px solid white;
+  color: white; padding: 8px 0; font-size: 16px; outline: none;
+}
+.options-l1 { display: flex; justify-content: space-between; font-size: 13px; margin: 20px 0; }
+.options-l1 a { color: white; text-decoration: none; font-weight: 500;}
+.btn-l1 {
+  width: 100%; padding: 12px; border-radius: 25px; border: none; font-weight: bold;
+  font-size: 16px; background: white; color: #333; cursor: pointer; margin-bottom: 20px;
+}
+.footer-text { font-size: 13px; color: #eee; }
+.footer-text a { color: #fff; font-weight: bold; text-decoration: none; }
+
+/* ==========================================
+   LAYOUT 2: Gym Split Screen Form
+   ========================================== */
+.container-l2 {
+  display: flex; width: 800px; height: 480px; background: white;
+  border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.left-l2 { width: 50%; padding: 45px; display: flex; flex-direction: column; justify-content: center;}
+.right-l2 { width: 50%; }
+.left-l2 h2 { font-size: 28px; color: #111; letter-spacing: 1px;}
+.line-l2 { width: 60px; border: 1.5px solid #ff5733; margin: 10px 0 20px 0; }
+.subtitle-l2 { color: #666; font-size: 14px; margin-bottom: 25px; }
+.input-group-l2 { margin-bottom: 20px; }
+.input-group-l2 label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+.input-group-l2 input {
+  width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; outline: none; font-size: 14px;
+}
+.btn-l2 {
+  background: #ff5733; color: white; border: none; padding: 12px; font-size: 16px;
+  font-weight: bold; border-radius: 5px; cursor: pointer; margin-top: 10px;
+}
+.forgot-l2 { text-align: center; font-size: 13px; color: #333; text-decoration: none; margin-top: 15px; }
+
+/* ==========================================
+   LAYOUT 3: Pastel Social Media Login
+   ========================================== */
+.box-l3 {
+  background: white; width: 420px; padding: 35px; border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center;
+}
+.box-l3 h2 { margin-bottom: 25px; font-size: 28px; }
+.input-icon-l3 {
+  position: relative; margin-bottom: 15px;
+}
+.input-icon-l3 i { position: absolute; left: 12px; top: 14px; color: #aaa; }
+.input-icon-l3 input {
+  width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #2bc4b6;
+  border-radius: 4px; outline: none; font-size: 14px;
+}
+.options-l3 { display: flex; justify-content: space-between; font-size: 13px; margin: 15px 0; color: #666;}
+.options-l3 a { color: red; text-decoration: none; }
+.btn-l3 {
+  width: 100%; background: #2bc4b6; color: white; border: none; padding: 10px;
+  font-size: 16px; border-radius: 4px; cursor: pointer; margin-bottom: 25px;
+}
+.social-section-l3 p { font-size: 14px; font-weight: bold; margin-bottom: 15px; }
+.social-section-l3 span { display: block; font-size: 11px; color: #777; font-weight: normal; margin-top: 2px;}
+.social-buttons { display: flex; gap: 8px; margin-bottom: 25px;}
+.social-buttons button {
+  flex: 1; padding: 8px; border: none; color: white; font-size: 12px; border-radius: 4px; cursor: pointer;
+}
+.social-buttons .tw { background-color: #26a6d1; }
+.social-buttons .fb { background-color: #3b5998; }
+.social-buttons .gp { background-color: #c93b2b; }
+.footer-l3 { font-size: 13px; border-top: 1px solid #eee; padding-top: 15px; }
+.footer-l3 a { color: red; text-decoration: none; font-weight: bold;}
+.register-btn-l3 {
+  display: block; width: 100%; background-color: #2bc4b6; color: white; border: none;
+  padding: 10px; margin-top: 15px; border-radius: 4px; font-weight: bold; cursor: pointer;
+}
+
+/* ==========================================
+   LAYOUT 4: Scenic Split Card
+   ========================================== */
+.container-l4 {
+  display: flex; width: 750px; height: 400px; background: white;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4); border-radius: 4px; overflow: hidden;
+}
+.left-l4 { width: 40%; padding: 40px 30px; display: flex; flex-direction: column; justify-content: center; }
+.left-l4 h2 { color: #1e4d75; margin-bottom: 25px; font-size: 26px;}
+.left-l4 input {
+  width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #8baac4; outline: none;
+}
+.left-l4 a { font-size: 11px; color: #1e4d75; text-decoration: underline; margin-bottom: 20px;}
+.btn-l4 {
+  width: 100%; background: transparent; border: 1px solid #1e4d75; padding: 6px;
+  color: #1e4d75; cursor: pointer; font-size: 14px;
+}
+.right-l4 { width: 60%; position: relative; }
+.overlay-text-l4 {
+  position: absolute; bottom: 40px; left: 30px; color: white; right: 30px;
+  background: rgba(0,0,0,0.2); padding: 15px; backdrop-filter: blur(4px);
+}
+.overlay-text-l4 h1 { font-size: 32px; margin-bottom: 5px; }
+.overlay-text-l4 p { font-size: 12px; line-height: 1.4; opacity: 0.9; }
+
+/* ==========================================
+   LAYOUT 5: Modern Sunset Split & Navbar
+   ========================================== */
+.navbar-l5 {
+  position: absolute; top: 0; left: 0; width: 100%; padding: 20px 80px;
+  display: flex; justify-content: space-between; align-items: center; z-index: 10;
+}
+.navbar-l5 .nav-links a { color: white; text-decoration: none; margin-right: 30px; font-size: 15px; font-weight: 500;}
+.search-l5 { position: relative; }
+.search-l5 input {
+  background: transparent; border: 1px solid white; border-radius: 4px;
+  padding: 6px 30px 6px 12px; color: white; outline: none; width: 200px;
+}
+.search-l5 i { position: absolute; right: 10px; top: 9px; color: white; font-size: 12px; }
+
+.container-l5 {
+  display: flex; width: 850px; height: 480px; background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(15px); border-radius: 15px; overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1); margin-top: 40px;
+}
+.left-l5 { width: 50%; padding: 40px; display: flex; flex-direction: column; justify-content: space-between; color: white; }
+.left-l5 h3 { font-size: 20px; font-weight: 600; }
+.welcome-msg-l5 h1 { font-size: 38px; margin-bottom: 2px; }
+.welcome-msg-l5 p { font-size: 18px; margin-bottom: 12px; font-weight: 500; }
+.welcome-msg-l5 span { font-size: 12px; opacity: 0.8; line-height: 1.4; display: block; margin-bottom: 20px; }
+.socials-l5 i { margin-right: 15px; font-size: 16px; cursor: pointer; }
+
+.right-l5 { width: 50%; padding: 50px 40px; color: white; display: flex; flex-direction: column; justify-content: center; }
+.right-l5 h2 { font-size: 28px; text-align: center; margin-bottom: 30px; }
+.input-box-l5 { position: relative; border-bottom: 2px solid white; margin-bottom: 25px; }
+.input-box-l5 input {
+  width: 100%; background: transparent; border: none; padding: 10px 25px 10px 0;
+  color: white; outline: none; font-size: 15px;
+}
+.input-box-l5 i { position: absolute; right: 5px; top: 14px; font-size: 14px; }
+.options-l5 { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 25px; }
+.options-l5 a { color: white; text-decoration: none; }
+.btn-l5 {
+  background: #bf1632; color: white; border: none; padding: 12px; border-radius: 6px;
+  font-size: 16px; font-weight: 600; cursor: pointer; margin-bottom: 20px;
+}
+.signup-text-l5 { text-align: center; font-size: 13px; }
+.signup-text-l5 a { color: white; font-weight: bold; text-decoration: none; }
+
+/* ==========================================
+   LAYOUT 6: Website Modal Window Design
+   ========================================== */
+.navbar-l6 {
+  position: absolute; top: 0; left: 0; width: 100%; padding: 20px 60px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.navbar-l6 .nav-links a { color: white; text-decoration: none; margin-right: 25px; font-size: 14px; }
+.nav-login-btn { background: white; border: none; padding: 6px 15px; font-weight: bold; border-radius: 4px; cursor: pointer;}
+
+.modal-l6 {
+  position: relative; display: flex; width: 750px; height: 430px;
+  background: white; border-radius: 4px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+.close-l6 {
+  position: absolute; top: 12px; right: 18px; font-size: 22px; color: #888; cursor: pointer; z-index: 5;
+}
+.left-l6 { width: 45%; position: relative; }
+.overlay-l6 {
+  position: absolute; inset: 0; background: rgba(0,0,0,0.4);
+  padding: 40px 25px; display: flex; flex-direction: column; justify-content: center; color: white; text-align: center;
+}
+.overlay-l6 h3 { font-size: 24px; margin-bottom: 15px; }
+.overlay-l6 p { font-size: 12px; line-height: 1.6; opacity: 0.9; }
+
+.right-l6 { width: 55%; padding: 45px; display: flex; flex-direction: column; justify-content: center; }
+.right-l6 h2 { text-align: center; font-size: 24px; margin-bottom: 30px; color: #333; letter-spacing: 1px;}
+.right-l6 input {
+  width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 15px; outline: none;
+}
+.pass-container-l6 { position: relative; }
+.pass-container-l6 i { position: absolute; right: 12px; top: 16px; color: #888; cursor: pointer;}
+.forgot-l6 { font-size: 12px; color: #16b9cb; text-decoration: none; margin-bottom: 25px; }
+.btn-l6 {
+  background: #16b9cb; color: white; border: none; padding: 12px; font-size: 15px;
+  border-radius: 4px; font-weight: bold; cursor: pointer; margin-bottom: 15px;
+}
+.footer-l6 { text-align: center; font-size: 12px; color: #666; }
+.footer-l6 a { color: #16b9cb; font-weight: bold; text-decoration: none; }
+
+/* ==========================================
+   LAYOUT 7: Cyberpunk Diagonal Cut
+   ========================================== */
+.card-l7 {
+  display: flex; width: 700px; height: 380px; background: #070d12;
+  border-radius: 10px; overflow: hidden; position: relative;
+  border: 1px solid #00f2fe; box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+}
+.form-side-l7 { width: 50%; padding: 40px; display: flex; flex-direction: column; justify-content: center; }
+.form-side-l7 h2 { color: white; font-size: 26px; margin-bottom: 25px; }
+.input-row-l7 { position: relative; margin-bottom: 15px; border-bottom: 1px solid #444; }
+.input-row-l7 input {
+  width: 100%; background: transparent; border: none; padding: 8px 30px 8px 0; color: white; outline: none;
+}
+.input-row-l7 i { position: absolute; right: 5px; top: 10px; color: #888; font-size: 12px; }
+.btn-l7 {
+  background: linear-gradient(90deg, #005c8a, #00b4cc); color: white; border: none;
+  padding: 10px; border-radius: 20px; font-weight: bold; margin: 20px 0 15px 0; cursor: pointer;
+}
+.form-side-l7 p { color: #aaa; font-size: 12px; text-align: center; }
+.form-side-l7 a { color: #00b4cc; text-decoration: none; font-weight: bold;}
+
+.banner-side-l7 {
+  width: 50%; background: linear-gradient(135deg, #00b4cc 0%, #005c8a 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+  display: flex; align-items: center; justify-content: center; padding-left: 40px; color: white;
+}
+.banner-content-l7 { text-align: center; padding: 20px; }
+.banner-content-l7 h1 { font-size: 26px; margin-bottom: 10px; }
+.banner-content-l7 p { font-size: 12px; opacity: 0.8; line-height: 1.4; }
+
+/* ==========================================
+   LAYOUT 8: Radar Circle Dash Box
+   ========================================== */
+.radar-container-l8 {
+  width: 420px; height: 420px; background: #161d29; border-radius: 50%;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  padding: 50px; border: 12px double #102a45;
+  box-shadow: 0 0 0 10px rgba(0,242,254,0.1), 0 0 30px rgba(0,242,254,0.2);
+}
+.radar-container-l8 h2 { color: #00f2fe; margin-bottom: 25px; font-size: 30px; letter-spacing: 1px;}
+.input-l8 {
+  width: 80%; background: #1f293a; border: 1px solid #2c3b54; border-radius: 20px;
+  padding: 10px 15px; color: white; outline: none; margin-bottom: 15px; text-align: center;
+}
+.forgot-l8 { color: #888; font-size: 12px; text-decoration: none; margin-bottom: 20px; }
+.btn-l8 {
+  width: 80%; background: #00f2fe; color: #111; font-weight: bold; border: none;
+  padding: 11px; border-radius: 20px; font-size: 15px; cursor: pointer; margin-bottom: 15px;
+}
+.signup-l8 { color: #00f2fe; text-decoration: none; font-size: 13px; font-weight: bold;}
+
+/* ==========================================
+   LAYOUT 9: Dark Neon Border Form
+   ========================================== */
+.card-l9 {
+  width: 360px; background: #252830; padding: 40px 30px; border-radius: 16px;
+  border-top: 3px solid #00f2fe; border-bottom: 3px solid #e91e63;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+.card-l9 h2 { color: #00f2fe; font-size: 26px; margin-bottom: 30px; }
+.group-l9 { margin-bottom: 20px; text-align: left;}
+.group-l9 label { display: block; color: #888; font-size: 13px; margin-bottom: 6px; }
+.group-l9 input {
+  width: 100%; background: #323642; border: none; border-radius: 10px;
+  padding: 12px; color: white; outline: none; font-size: 14px;
+}
+.btn-l9 {
+  width: 100%; background: #00f2fe; color: #111; font-weight: bold; border: none;
+  padding: 12px; border-radius: 20px; font-size: 15px; cursor: pointer; margin: 15px 0;
+  box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4);
+}
+.card-l9 p { color: #aaa; font-size: 12px; margin-bottom: 8px; }
+.card-l9 a { color: #e91e63; text-decoration: none; font-weight: 500;}
+
+/* ==========================================
+   LAYOUT 10: Coffee Theme Minimal Box
+   ========================================== */
+.flex-container-l10 { display: flex; width: 680px; align-items: center; }
+.card-l10 {
+  width: 320px; background: rgba(0, 0, 0, 0.85); border-radius: 4px;
+  padding: 30px 25px; text-align: center; color: white; position: relative;
+}
+.avatar-l10 {
+  width: 50px; height: 50px; background: #ff3333; border-radius: 50%;
+  display: flex; justify-content: center; align-items: center;
+  position: absolute; top: -25px; left: calc(50% - 25px); font-size: 20px;
+}
+.card-l10 h3 { margin: 15px 0 25px 0; font-size: 20px; font-weight: 500; }
+.group-l10 { text-align: left; margin-bottom: 18px; }
+.group-l10 label { display: block; font-size: 12px; color: #bbb; margin-bottom: 5px; font-weight: bold;}
+.group-l10 input {
+  width: 100%; background: transparent; border: none; border-bottom: 1px solid white;
+  color: white; padding: 6px 0; outline: none; font-size: 14px;
+}
+.btn-l10 {
+  width: 100%; background: #ff3333; color: white; border: none; padding: 10px;
+  border-radius: 20px; font-weight: bold; cursor: pointer; margin: 15px 0;
+}
+.card-l10 a { display: block; color: #aaa; font-size: 11px; text-decoration: none; margin-bottom: 8px; text-align: left; }
+.coffee-space-l10 { width: 360px; height: 100%; } /* Empty balance placeholder mimicking template layout perspective */
